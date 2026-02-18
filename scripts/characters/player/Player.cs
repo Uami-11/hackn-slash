@@ -16,7 +16,8 @@ public partial class Player : CharacterBody2D
 
 	public override void _Ready()
 	{
-		weaponEquipped = false;
+		Globals.playerBody = this;
+		weaponEquipped = Globals.playerWeaponEquip;
    	}
 
 	public override void _PhysicsProcess(double delta)
@@ -52,6 +53,7 @@ public partial class Player : CharacterBody2D
 	
 	public void HandleAnimation(Vector2 dir)
 	{
+		weaponEquipped = Globals.playerWeaponEquip;
 		if (dir.X > 0) sprite.FlipH = false;
 		if (dir.X < 0) sprite.FlipH = true;
 		if (!weaponEquipped)

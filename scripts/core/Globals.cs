@@ -1,11 +1,10 @@
 using Godot;
 using System;
 
-namespace Core
+[GlobalClass]
+public partial class Globals : Node
 {
-	public partial class Globals : Node
-	{
-		public bool playerWeaponEquip;
+	public static bool playerWeaponEquip;
+	public static CharacterBody2D playerBody;
 
-	}
 }

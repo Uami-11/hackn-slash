@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7lshqp4yyyal"]
+
+[ext_resource type="Script" uid="uid://cflqeesja4n5s" path="res://scripts/characters/enemies/BatEnemy.cs" id="1_bjas5"]
+[ext_resource type="SpriteFrames" uid="uid://b2efafwp3fa5a" path="res://resources/spriteframes/bat_enemy.tres" id="2_tael6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3pkax"]
+radius = 5.0990195
+
+[node name="BatEnemy" type="CharacterBody2D" node_paths=PackedStringArray("timer", "sprite")]
+script = ExtResource("1_bjas5")
+timer = NodePath("Timer")
+sprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_tael6")
+animation = &"fly"
+autoplay = "fly"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3pkax")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
