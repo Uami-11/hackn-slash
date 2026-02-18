@@ -1,10 +1,11 @@
-[gd_resource type="SpriteFrames" load_steps=60 format=3 uid="uid://k7hegbdhwnpy"]
+[gd_resource type="SpriteFrames" load_steps=66 format=3 uid="uid://k7hegbdhwnpy"]
 
 [ext_resource type="Texture2D" uid="uid://biyay4p281m56" path="res://assets/art from itch/player/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack 0-1 Sprite Sheet.png" id="1_x6gss"]
 [ext_resource type="Texture2D" uid="uid://5bp6286pd7lp" path="res://assets/art from itch/player/Dacian Warrior Animated Pixel-Art 2D/Attack/50x50/Attack Sprite 0.png" id="2_1ovb7"]
 [ext_resource type="Texture2D" uid="uid://lvskxwh3qy87" path="res://assets/art from itch/player/Dacian Warrior Animated Pixel-Art 2D/Dead/50x50/Dead 1 Sprite Sheet.png" id="3_s3nrn"]
 [ext_resource type="Texture2D" uid="uid://du1gbcee0vx48" path="res://assets/art from itch/player/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/Fall 0 Sprite Sheet.png" id="4_qbc5j"]
 [ext_resource type="Texture2D" uid="uid://cae8b2t6ruf0" path="res://assets/art from itch/player/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 1.png" id="5_umanv"]
+[ext_resource type="Texture2D" uid="uid://b30ss5hp3hw75" path="res://assets/art from itch/player/Dacian Warrior Animated Pixel-Art 2D/Jump/50x50/Jump Sprite 0.png" id="6_1ovb7"]
 [ext_resource type="Texture2D" uid="uid://cafsxcdfsj3wp" path="res://assets/art from itch/player/Dacian Warrior Animated Pixel-Art 2D/Run/50x50/Run Sprite 0.png" id="6_2ci52"]
 [ext_resource type="Texture2D" uid="uid://dksrva4t503fq" path="res://assets/art from itch/player/Dacian Warrior Animated Pixel-Art 2D/Fall/50x50/Fall 1 Sprite Sheet.png" id="7_updop"]
 [ext_resource type="Texture2D" uid="uid://gwxbk2oys5vp" path="res://assets/art from itch/player/Dacian Warrior Animated Pixel-Art 2D/Idle/50x50/Idle Sprite 0.png" id="8_0qatq"]
@@ -145,6 +146,26 @@ region = Rect2(100, 0, 50, 37)
 [sub_resource type="AtlasTexture" id="AtlasTexture_lnpl6"]
 atlas = ExtResource("5_umanv")
 region = Rect2(150, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3nrn"]
+atlas = ExtResource("6_1ovb7")
+region = Rect2(0, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbc5j"]
+atlas = ExtResource("6_1ovb7")
+region = Rect2(50, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umanv"]
+atlas = ExtResource("6_1ovb7")
+region = Rect2(100, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ci52"]
+atlas = ExtResource("6_1ovb7")
+region = Rect2(150, 0, 50, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_updop"]
+atlas = ExtResource("6_1ovb7")
+region = Rect2(200, 0, 50, 37)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5bn3a"]
 atlas = ExtResource("6_2ci52")
@@ -343,6 +364,26 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3nrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbc5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umanv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ci52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_updop")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 9.0
 }, {
 "frames": [{
 "duration": 1.0,

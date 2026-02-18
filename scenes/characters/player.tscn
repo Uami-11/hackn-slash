@@ -6,16 +6,25 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ojpyd"]
 size = Vector2(11, 14)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_yewv4")
+sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_rp718")
-animation = &"idle"
+animation = &"jump"
 autoplay = "idle"
-frame = 3
-frame_progress = 0.2944982
+frame = 4
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_ojpyd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, -75)
+zoom = Vector2(2.5, 2.5)
+limit_left = -42
+limit_top = 20
+limit_right = 893
+limit_bottom = 378

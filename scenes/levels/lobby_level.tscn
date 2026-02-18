@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://bi8jcpo5hrl70"]
+[gd_scene load_steps=9 format=4 uid="uid://bi8jcpo5hrl70"]
 
 [ext_resource type="Texture2D" uid="uid://bjrhmbjb0dhbo" path="res://assets/art from itch/backgrounds/Background.png" id="1_mfas6"]
 [ext_resource type="TileSet" uid="uid://dfyw6nffohade" path="res://resources/tilesets/tileset.tres" id="2_a5umu"]
 [ext_resource type="TileSet" uid="uid://1rlpjw7wqwj5" path="res://resources/tilesets/bush.tres" id="3_xtmwt"]
 [ext_resource type="Texture2D" uid="uid://copt25ypl377g" path="res://assets/art from itch/backgrounds/House1.png" id="4_mlky2"]
 [ext_resource type="Texture2D" uid="uid://qywmm2y5p2e4" path="res://assets/art from itch/backgrounds/Tree1.png" id="5_c2eiw"]
+[ext_resource type="PackedScene" uid="uid://d2x2u2tkh2fwn" path="res://scenes/characters/player.tscn" id="6_a5umu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nmmna"]
 size = Vector2(115.5, 229.5)
@@ -54,3 +55,10 @@ shape = SubResource("RectangleShape2D_nmmna")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/StaticBody2D2"]
 position = Vector2(780.25, 428)
 shape = SubResource("RectangleShape2D_sjn3d")
+
+[node name="Player" parent="." instance=ExtResource("6_a5umu")]
+position = Vector2(273, 17)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(336, -2)
+zoom = Vector2(2.5, 2.5)
